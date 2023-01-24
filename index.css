@@ -15,7 +15,7 @@
 
 body {
     font-family: Chivo, sans-serif;
-    background-image: url("/img/image-host-mobile.jpg");
+    background-image: url("img/image-host-mobile.jpg");
     background-repeat: no-repeat;
     background-color: #121725;
     background-size: cover;
