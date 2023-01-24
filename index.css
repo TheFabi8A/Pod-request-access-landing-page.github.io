@@ -1,5 +1,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #2c344b;
+    --green: #53e6af;
+    --palide: #a0aac2;
+    --white: #fff;
+}
+
 body {
     font-family: Chivo, sans-serif;
+    background-image: url("/img/image-host-mobile.jpg");
+    background-repeat: no-repeat;
+    background-color: #121725;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.content {
+    border: 3px solid blue;
+    position: absolute;
+    top: 0;
+}
+
+.content-fixed {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.content-fixed p {
+    color: var(--palide);
+    width: 335px;
+}
+
+.logo {
+    margin: 65px 0 50px;
+    width: 90px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 1.65em;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.title span {
+    color: var(--white);
+}
+
+.container-icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1em;
+}
+
+.container-icons img {
+    height: 1em;
+    object-fit: scale-down;
 }
