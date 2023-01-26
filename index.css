@@ -151,6 +151,7 @@ span.showError {
     height: 35px;
     position: relative;
     bottom: -12.5px;
+    left: -5px;
 }
 
 @media screen and (min-width: 768px) {
