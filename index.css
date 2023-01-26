@@ -9,7 +9,7 @@
 :root {
     --blue: #2c344b;
     --green: #54e6af;
-    --palide: #c2cbe5;
+    --palide: #7b808f;
 }
 
 body {
@@ -103,22 +103,28 @@ body {
     background-color: var(--green);
 }
 
-.img-background {
+.img-background-tablet,
+.img-background-desktop {
     display: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     body {
         background-image: none;
         background-color: #151a25;
     }
 
-    .img-background {
+    .content {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .img-background-tablet {
         display: block;
     }
 
     .content {
-        position: absolute;
         left: 0;
     }
 
@@ -135,7 +141,7 @@ body {
         position: absolute;
         margin: 0;
         top: 50px;
-        left: 40px;
+        left: 35px;
         width: 150px;
     }
 
@@ -182,5 +188,79 @@ body {
     .content-fixed p {
         width: 440px;
         font-size: 1.075em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .img-background-desktop {
+        display: block;
+        position: relative;
+        top: 100px;
+    }
+
+    .content {
+        left: 140px;
+    }
+
+    .content-fixed {
+        background-color: #151a25;
+        margin-top: 235px;
+        align-items: flex-start;
+        text-align: left;
+        padding: 50px 30px 0;
+        width: 785px;
+    }
+
+    .logo {
+        position: absolute;
+        margin: 0;
+        top: 50px;
+        left: 35px;
+        width: 150px;
+    }
+
+    .container-icons {
+        order: 4;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .container-icons img {
+        height: auto;
+        width: auto;
+    }
+
+    .container-absolute {
+        justify-content: end;
+    }
+
+    .form {
+        position: relative;
+        width: 65%;
+        background-color: #2b3246;
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    .input-email {
+        background: none;
+        padding-left: 25px;
+    }
+
+    .input-btn {
+        position: absolute;
+        width: auto;
+        right: 5px;
+        padding: 0 25px;
+    }
+
+    .title {
+        font-size: 3.25em;
+        line-height: 1.25em;
+    }
+
+    .content-fixed p {
+        width: 485px;
+        font-size: 1.2em;
     }
 }
