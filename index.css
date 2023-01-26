@@ -45,11 +45,13 @@ body {
     line-height: 1.75em;
     font-size: 0.925em;
     width: 320px;
+    user-select: none;
 }
 
 .logo {
     margin: 65px 0 50px;
     width: 90px;
+    user-select: none;
 }
 
 .title {
@@ -60,8 +62,18 @@ body {
     color: var(--green);
 }
 
+.title::selection {
+    color: #fff;
+    background-color: var(--blue);
+}
+
 .title span {
     color: #fff;
+}
+
+.title span::selection {
+    color: var(--green);
+    background-color: var(--blue);
 }
 
 .container-icons {
@@ -69,6 +81,7 @@ body {
     width: 90%;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
 }
 
 .container-icons img {
@@ -95,12 +108,22 @@ body {
 
 .input-email {
     background-color: var(--blue);
-    color: var(--palide);
+    color: var(--green);
     padding-left: 40px;
+}
+
+.input-email:focus {
+    outline: none;
+    border: 2px dashed var(--green);
+}
+
+.input-email::placeholder {
+    color: var(--palide);
 }
 
 .input-btn {
     background-color: var(--green);
+    cursor: pointer;
 }
 
 .img-background-tablet,
