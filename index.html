@@ -8,7 +8,6 @@
     <title>Pod Request Access Landing Page</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="/assets/favicon-32x32.png" type="image/x-icon">
-    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -24,8 +23,8 @@
         <div class="content">
             <div class="content-fixed">
                 <a href="https://thefabi8a.github.io/Pod-request-access-landing-page.github.io/">
+                    <img class="logo" src="svg/logo.svg" alt="">
                 </a>
-                <img class="logo" src="svg/logo.svg" alt="">
                 <h1 class="title">publish your podcasts<br>
                     <span>everywhere.</span>
                 </h1>
@@ -40,13 +39,24 @@
                     <img src="svg/google-podcasts.svg" alt="">
                     <img src="svg/pocket-casts.svg" alt="">
                 </div>
-                <form action="" class="form">
-                    <input class="input-email" type="email" name="" id="" placeholder="Email address">
-                    <input class="input-btn" type="button" value="Request Access">
+                <form action="" class="form" id="form">
+                    <label>
+                        <input class="input-email" type="email" required name="email" id="" placeholder="Email address">
+                        <span class="errorMsg">
+                            <svg class="error-svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 16H12.01M12 8V12M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                                    stroke="#54e6af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> Oops! Please check your email
+                        </span>
+                    </label>
+                    <input class="input-btn" type="submit" value="Request Access">
                 </form>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -7,9 +7,9 @@
 }
 
 :root {
-    --blue: #2c344b;
+    --blue: #121725;
     --green: #54e6af;
-    --palide: #7b808f;
+    --palide: #5a668a;
 }
 
 body {
@@ -64,7 +64,7 @@ body {
 
 .title::selection {
     color: #fff;
-    background-color: var(--blue);
+    background-color: var(--palide);
 }
 
 .title span {
@@ -73,7 +73,7 @@ body {
 
 .title span::selection {
     color: var(--green);
-    background-color: var(--blue);
+    background-color: var(--palide);
 }
 
 .container-icons {
@@ -99,17 +99,15 @@ body {
     width: 95%;
 }
 
-.form > input {
-    border: none;
-    font-weight: 900;
-    height: 50px;
-    border-radius: 25px;
-}
-
 .input-email {
     background-color: var(--blue);
     color: var(--green);
     padding-left: 40px;
+    border: none;
+    font-weight: 900;
+    height: 50px;
+    border-radius: 25px;
+    width: 100%;
 }
 
 .input-email:focus {
@@ -124,15 +122,35 @@ body {
 .input-btn {
     background-color: var(--green);
     cursor: pointer;
+    border: none;
+    font-weight: 900;
+    height: 50px;
+    border-radius: 25px;
 }
 
 .img-background-tablet,
 .img-background-desktop {
     display: none;
+    user-select: none;
 }
 
-a {
+span.errorMsg {
+    display: none;
     position: absolute;
+    bottom: 160px;
+    left: 21px;
+    color: red;
+}
+
+span.showError {
+    display: block;
+}
+
+.error-svg {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    bottom: -12.5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -143,6 +161,15 @@ a {
 
     .content {
         position: absolute;
+    }
+
+    span.errorMsg {
+        bottom: -35px;
+        left: 21px;
+    }
+
+    .error-svg {
+        top: 15px;
     }
 }
 
