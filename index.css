@@ -7,12 +7,6 @@
     border: none;
 }
 
-:root {
-    --blue: #121725;
-    --green: #54e6af;
-    --palide: #5a668a;
-}
-
 body {
     font-family: Chivo, sans-serif;
     background-image: url("img/image-host-mobile.jpg");
@@ -20,6 +14,12 @@ body {
     background-color: #2a3657;
     background-size: cover;
     background-blend-mode: multiply;
+}
+
+:root {
+    --blue: #121725;
+    --green: #54e6af;
+    --palide: #5a668a;
 }
 
 .container-absolute {
@@ -42,14 +42,6 @@ body {
     gap: 25px;
 }
 
-.content-fixed p {
-    color: var(--palide);
-    line-height: 1.75em;
-    font-size: 0.925em;
-    width: 320px;
-    user-select: none;
-}
-
 .logo {
     margin: 65px 0 50px;
     width: 90px;
@@ -64,33 +56,12 @@ body {
     color: var(--green);
 }
 
-.title::selection {
-    color: #fff;
-    background-color: var(--palide);
-}
-
-.title span {
-    color: #fff;
-}
-
-.title span::selection {
-    color: var(--green);
-    background-color: var(--palide);
-}
-
 .container-icons {
     display: flex;
     width: 90%;
     justify-content: space-between;
     align-items: center;
     user-select: none;
-}
-
-.container-icons img {
-    align-self: center;
-    height: 20px;
-    width: 23%;
-    object-fit: scale-down;
 }
 
 .form {
@@ -109,15 +80,6 @@ body {
     height: 50px;
     border-radius: 25px;
     width: 100%;
-}
-
-.input-email:focus {
-    outline: none;
-    border: 2px dashed var(--green);
-}
-
-.input-email::placeholder {
-    color: var(--palide);
 }
 
 .input-btn {
@@ -191,6 +153,44 @@ body {
     background: none;
 }
 
+.container-icons img {
+    align-self: center;
+    height: 20px;
+    width: 23%;
+    object-fit: scale-down;
+}
+
+.content-fixed p {
+    color: var(--palide);
+    line-height: 1.75em;
+    font-size: 0.925em;
+    width: 320px;
+    user-select: none;
+}
+
+.title span {
+    color: #fff;
+}
+
+.input-email::placeholder {
+    color: var(--palide);
+}
+
+.title::selection {
+    color: #fff;
+    background-color: var(--palide);
+}
+
+.title span::selection {
+    color: var(--green);
+    background-color: var(--palide);
+}
+
+.input-email:focus {
+    outline: none;
+    border: 2px dashed var(--green);
+}
+
 @media screen and (min-width: 768px) {
     body {
         background-image: none;
@@ -225,6 +225,7 @@ body {
 
     .content-fixed {
         background-color: #151a25;
+        height: 525px;
         margin-top: 250px;
         align-items: flex-start;
         text-align: left;
@@ -245,11 +246,6 @@ body {
         justify-content: space-between;
     }
 
-    .container-icons img {
-        height: auto;
-        width: auto;
-    }
-
     .container-absolute {
         justify-content: end;
     }
@@ -265,7 +261,6 @@ body {
     .input-email {
         background: none;
         padding-left: 25px;
-        background-color: red;
     }
 
     .input-btn {
@@ -319,11 +314,6 @@ body {
         justify-content: space-between;
     }
 
-    .container-icons img {
-        height: auto;
-        width: auto;
-    }
-
     .container-absolute {
         justify-content: end;
     }
@@ -356,5 +346,10 @@ body {
     .content-fixed p {
         width: 485px;
         font-size: 1.2em;
+    }
+
+    .container-icons img {
+        height: auto;
+        width: auto;
     }
 }
