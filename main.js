@@ -3,6 +3,8 @@ const inputs = document.querySelectorAll('#form input');
 let messageError = document.getElementById('message-error');
 let containerMessage = document.getElementById('message-container');
 let containerCheck = document.getElementById('message-check');
+let containerAdd = document.getElementById('container-add');
+let btnSubmit = document.getElementById('btn-submit');
 
 const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -22,11 +24,24 @@ const campos = {
 const validarCampo = (expresion, input, campo) => {
     if (expresion.test(input.value)) {
         containerMessage.classList.remove('view-error');
+        messageError.setAttribute('value', '!Oops please check your email');
         campos[campo] = true;
     } else {
         containerMessage.classList.add('view-error');
+        messageError.setAttribute('value', '!Oops please check your email');
         campos[campo] = false;
     }
+
+    if (input.value.length == 0) {
+        containerMessage.classList.remove('view-error');
+    }
+
+    btnSubmit.addEventListener('click', () => {
+        if (input.value.length == 0) {
+            containerMessage.classList.add('view-error');
+            messageError.setAttribute('value', '!Oops please add your email');
+        }
+    });
 }
 
 inputs.forEach((input) => {
@@ -42,8 +57,7 @@ form.addEventListener('submit', (e) => {
         containerCheck.classList.add('view-check');
         setTimeout(() => {
             containerCheck.classList.remove('view-check');
-        }, 3000);
+        }, 5000);
     } else {
-        messageError.value = "!Oops please add your email";
     }
 });

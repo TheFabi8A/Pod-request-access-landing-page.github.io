@@ -149,9 +149,9 @@ body {
     align-self: flex-start;
 }
 
-.message-error,
-.message-add {
+.message-error {
     color: red;
+    width: 300px;
     background: none;
 }
 
@@ -170,6 +170,25 @@ body {
 
 .view-check {
     display: flex;
+}
+
+.message-container-add {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    align-self: flex-start;
+}
+
+.view-add {
+    display: flex;
+}
+
+.message-add {
+    color: red;
+    width: 300px;
+    background: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -246,6 +265,7 @@ body {
     .input-email {
         background: none;
         padding-left: 25px;
+        background-color: red;
     }
 
     .input-btn {
