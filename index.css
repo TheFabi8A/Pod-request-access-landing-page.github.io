@@ -18,7 +18,7 @@ body {
 
 :root {
     --blue: #121725;
-    --green: #54e6af;
+    --green: hsl(157deg 74% 62%);
     --palide: #5a668a;
 }
 
