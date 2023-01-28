@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 :root {
@@ -24,6 +25,7 @@ body {
 .container-absolute {
     display: flex;
     justify-content: center;
+    gap: 0;
 }
 
 .content {
@@ -94,7 +96,6 @@ body {
 .form {
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
     gap: 15px;
     width: 95%;
 }
@@ -134,24 +135,41 @@ body {
     user-select: none;
 }
 
-span.errorMsg {
-    display: none;
-    position: absolute;
-    bottom: 160px;
-    left: 21px;
-    color: red;
-}
-
-span.showError {
-    display: block;
-}
-
-.error-svg {
+[class$="svg"] {
     width: 35px;
     height: 35px;
+}
+
+.message-container-error {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     position: relative;
-    bottom: -12.5px;
-    left: -5px;
+    align-self: flex-start;
+}
+
+.message-error,
+.message-add {
+    color: red;
+    background: none;
+}
+
+.view-error {
+    display: flex;
+}
+
+.message-container-check {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    color: #fff;
+}
+
+.view-check {
+    display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -164,13 +182,16 @@ span.showError {
         position: absolute;
     }
 
-    span.errorMsg {
-        bottom: -35px;
-        left: 21px;
+    .container-icons {
+        order: 10;
     }
 
     .error-svg {
         top: 15px;
+    }
+
+    .form {
+        margin: 0;
     }
 }
 
@@ -201,7 +222,6 @@ span.showError {
     }
 
     .container-icons {
-        order: 4;
         width: 87.5%;
         justify-content: space-between;
     }
@@ -275,7 +295,6 @@ span.showError {
     }
 
     .container-icons {
-        order: 4;
         width: 80%;
         justify-content: space-between;
     }
